@@ -1,28 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
 
 import Search from 'components/presentational/SearchPres';
-
-// Create a Title component that'll render an <h1> tag with some styles
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-
-// Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-`;
+import { Title, Main, Content } from 'components/styled/styles'
 
 export default class TopLevelApp extends React.Component {
-    render() {
-        return (
-            <Wrapper>
-                <Title>Data Displayed</Title>
-                <Search />
-            </Wrapper>
-        )
-    }
+  render() {
+    return (
+      <Main>
+        <Content>
+           <Title>Data Displayed</Title>
+          <Search />
+        </Content>
+      </Main>
+    )
+  }
 }

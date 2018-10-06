@@ -1,3 +1,38 @@
+:root {
+  --green-90: #3F7F6A;
+  --green-75: #197F5E;
+  --green-50: #28CC96;
+  --green-25: #32FFBC;
+  --green-10: #7EFFD5;
+  --blue-gray: #D0DCF8;
+  --gray: #DCDCE2;
+  --off-white: #F8F9FC;
+}
+
 body, div, span, section, main, footer, header, nav {
-    box-sizing: border-box
+  box-sizing: border-box
+}
+
+html, body {
+  font-family: 'Abel', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+main {
+  background-color: var(--blue-gray);
 }
