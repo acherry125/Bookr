@@ -4,12 +4,13 @@
   --green-50: #28CC96;
   --green-25: #32FFBC;
   --green-10: #7EFFD5;
-  --blue-gray: #D0DCF8;
+  --blue-gray: #EFEDF8;
   --gray: #DCDCE2;
+  --white: #fff;
   --off-white: #F8F9FC;
 }
 
-body, div, span, section, main, footer, header, nav {
+body, div, span, section, main, footer, header, nav, input {
   box-sizing: border-box
 }
 
@@ -22,17 +23,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 main {
   background-color: var(--blue-gray);
+}
+
+@media only screen and (min-width: 60em) {
+  h1 {
+    font-size: 4rem;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+  
+  h3 {
+    font-size: 2rem;
+  }
+  
 }
