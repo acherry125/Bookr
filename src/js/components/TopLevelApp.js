@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Search from 'components/presentational/SearchPres';
-import { Title, Main, Content } from 'components/styled/styles'
+import { Title, Main, Content } from 'components/presentational/styled'
 
 import {
   BrowserRouter as Router,
