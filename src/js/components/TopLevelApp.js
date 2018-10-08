@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Search from 'components/presentational/SearchPres';
+import Search from 'components/container/Search';
+import SearchResults from 'components/container/SearchResults';
 import { Title, Main, Content } from 'components/presentational/styled'
 
 import {
@@ -19,6 +20,7 @@ export default class TopLevelApp extends React.Component {
           <Router>
             <Switch>
               <Route exact path="/" component={Search}/>
+              <Route exact path="/results" component={SearchResults}/>
             </Switch>
           </Router>
         </Content>

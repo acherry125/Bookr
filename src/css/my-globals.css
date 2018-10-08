@@ -8,6 +8,8 @@
   --gray: #DCDCE2;
   --white: #fff;
   --off-white: #F8F9FC;
+
+  --primary: var(--green-50);
 }
 
 body, div, span, section, main, footer, header, nav, input {

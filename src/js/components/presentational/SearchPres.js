@@ -1,31 +1,34 @@
 import React from 'react';
 
 import { 
-  SearchWrapper, 
-  SearchTitle, 
   SearchForm, 
   SearchLabel, 
   SearchInput,
-  SearchSubmit
+  SubmitButton,
+  PageTitle, 
+  Row,
+  Column
 } from 'components/presentational/styled';
 
 export default class SearchPres extends React.Component {
-
-  handleSubmit(e) {
-    e.preventDefault();
+  constructor(props) {
+    super(props);
   }
  
   render() {
     const searchPlaceholder = 'Search here';
+
     return (
-      <SearchWrapper>
-        <SearchTitle>Search the world's Data</SearchTitle>
-        <SearchForm onSubmit={this.handleSubmit}>
+      <Column centered>
+        <PageTitle>Search the world's Data</PageTitle>
+        <SearchForm onSubmit={this.props.handleSubmit}>
             <SearchLabel htmlFor="search-bar">Search:</SearchLabel>
-            <SearchInput id="search-bar" placeholder={searchPlaceholder} />
-            <SearchSubmit />
+            <Row>
+              <SearchInput id="search-bar" placeholder={searchPlaceholder} />
+              <SubmitButton round />
+            </Row>
         </SearchForm>
-      </SearchWrapper>
+      </Column>
     )
   }
 }

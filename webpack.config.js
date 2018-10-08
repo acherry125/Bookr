@@ -5,6 +5,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -25,7 +26,7 @@ module.exports = {
       {
         test: /\.css$/,
         use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
-    }
+      }
 
     ]
   },
@@ -42,6 +43,6 @@ module.exports = {
     alias: {
       components: path.resolve(__dirname, './src/js/components')
     }
-  
+
   },
 };
