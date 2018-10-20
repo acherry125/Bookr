@@ -16,7 +16,7 @@ export default class TopLevelApp extends React.Component {
     return (  
       <Main>
         <Content>
-          <Title>Data Displayed</Title>
+          <Title>Bookr</Title>
           <Router>
             <Switch>
               <Route exact path="/" component={Search}/>

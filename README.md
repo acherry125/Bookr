@@ -1,4 +1,4 @@
-# Data Displayed
+# Bookr
 ## An application to quickly view and query data.
 
 To run, download locally, have Node.js/NPM installed (pick the LTS version at https://nodejs.org/en/) and run:
