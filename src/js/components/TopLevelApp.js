@@ -1,8 +1,9 @@
 import React from 'react';
 
-import Search from 'components/container/Search';
-import SearchResults from 'components/container/SearchResults';
-import { Title, Main, Content } from 'components/presentational/styled'
+import LandingPage from 'components/container/Landing';
+import Dashboard from 'components/container/Dashboard';
+import { Register } from 'components/container/account/';
+import { Title, Main, Content } from 'components/presentational/styled';
 
 import {
   BrowserRouter as Router,
@@ -19,8 +20,9 @@ export default class TopLevelApp extends React.Component {
           <Title>Bookr</Title>
           <Router>
             <Switch>
-              <Route exact path="/" component={Search}/>
-              <Route exact path="/results" component={SearchResults}/>
+              <Route exact path="/" component={LandingPage}/>
+              <Route path="/register" component={Register} />
+              <Route path="/user/:userId/" component={Dashboard} />
             </Switch>
           </Router>
         </Content>

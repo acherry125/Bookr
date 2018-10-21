@@ -1,0 +1,1 @@
+export { RegisterPres } from './RegisterPres';

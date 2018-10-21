@@ -39,7 +39,7 @@ export const Column = styled(Flex).attrs({
   direction: 'column',
   wrap: props => props.wrap || 'nowrap'
 })`
-  ${props => props.centered ? 'align-items: center' : ''}
+  align-items: ${props => props.columnAlign || 'flex-start'}
 `;
 
 export const WrapRow = styled(Row).attrs({wrap: 'wrap'})``;
@@ -50,22 +50,28 @@ export const Submit = styled.input.attrs({
   value: "Submit"
 })``;
 
-export const SubmitButton = styled(Submit)`
+export const PageTitle = styled.h2`
+  color: #000;
+`;
+
+export const MakeButton = (type, inputType) => styled(type).attrs({
+  type: inputType
+})`
   display: inline-block;
   background: var(--primary);
   color: #fff;
+  font-weight: bold;
   border: 0px solid var(--gray);
   cursor: pointer;
   padding: 0.5em 0.75em;
   font-size: 1.25em;
   margin: 0 0.3em;
   line-height: 1em;
+  text-decoration: none;
   ${props => props.round ? 'border-radius: 0.5rem;' : ''}
   &:hover {
     background: var(--primary);
   }
 `;
 
-export const PageTitle = styled.h2`
-  color: #000;
-`;
+export const SubmitButton = MakeButton(Submit);
