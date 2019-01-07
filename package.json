@@ -28,6 +28,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
     "lodash": "^4.17.11",
     "normalize.css": "^8.0.0",
     "react-router-dom": "^4.3.1",
