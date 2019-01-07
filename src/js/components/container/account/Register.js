@@ -8,7 +8,7 @@ export class Register extends React.Component {
   }
 
   render() {
-    return <RegisterPres/>
+    return <RegisterPres handleLogin={this.props.handleLogin}/>
   }
 
 }

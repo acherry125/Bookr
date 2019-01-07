@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { 
-  LandingGuidance,
+import {
   Row,
   MakeButton,
-  Column
+  Column,
+  Title
 } from 'components/presentational/styled';
 
 const Button = MakeButton('input', 'button');
@@ -16,7 +16,7 @@ class AddBook extends React.Component {
 
   render() {
     return (
-      <Button value="Add new book" onClick={this.props.handleToggle}/>
+      <Button value="Add new book" onClick={this.props.handleToggle} />
     )
   }
 }
@@ -40,9 +40,8 @@ export class DashboardPres extends React.Component {
     const { handleToggle, addingNewBook } = this.props;
     return (
       <Column>
-        <LandingGuidance>
-          Nisi amet qui veniam commodo Lorem aliquip anim. Sit amet culpa ad adipisicing sunt qui est amet sunt proident duis ea aliqua ut. Ut anim aute ex est laborum deserunt eiusmod. Cupidatat et enim et exercitation in dolor voluptate sint enim et ipsum in tempor. 
-        </LandingGuidance>
+        <Title>Library</Title>
+        <p>Keep your library up to date to learn new insights about your reading habits.</p>
         <AddBook current={addingNewBook} handleToggle={handleToggle} />
       </Column>
     )
