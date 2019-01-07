@@ -39,11 +39,12 @@ export const Column = styled(Flex).attrs({
   direction: 'column',
   wrap: props => props.wrap || 'nowrap'
 })`
-  align-items: ${props => props.columnAlign || 'flex-start'}
+  align-items: ${props => props.columnAlign || 'flex-start'};
+  width: 100%;
 `;
 
-export const WrapRow = styled(Row).attrs({wrap: 'wrap'})``;
-export const WrapColumn = styled(Column).attrs({wrap: 'wrap'})``;
+export const WrapRow = styled(Row).attrs({ wrap: 'wrap' })``;
+export const WrapColumn = styled(Column).attrs({ wrap: 'wrap' })``;
 
 export const Submit = styled.input.attrs({
   type: "submit",
@@ -65,7 +66,7 @@ export const MakeButton = (type, inputType) => styled(type).attrs({
   cursor: pointer;
   padding: 0.5em 0.75em;
   font-size: 1.25em;
-  margin: 0 0.3em;
+  margin: 0;
   line-height: 1em;
   text-decoration: none;
   ${props => props.round ? 'border-radius: 0.5rem;' : ''}
@@ -75,3 +76,37 @@ export const MakeButton = (type, inputType) => styled(type).attrs({
 `;
 
 export const SubmitButton = MakeButton(Submit);
+
+export const Divider = styled.hr`
+  margin: ${props => props.visible ? '1.25rem 0' : '5rem 0'};
+  border: ${props => props.visible ? '2px solid #dcddde' : '0'};
+`;
+
+export const Form = styled.form`
+  width: 100%;
+  max-width: 40rem;
+`;
+
+export const InputGroup = styled.div`
+  margin: 1.25rem 0;
+  > label {
+    font-weight: bold;
+  }
+`;
+
+export const Input = styled.input.attrs({
+  type: (props) => props.type
+})`
+  border: 0;
+  border-bottom: 2px solid #A7A7A7;
+  padding: 0.5rem 0;
+  &:focus, &:active {
+    --placeholder: var(--white);
+  }
+  &[type="text"], &[type="number"], &[type="date"] {
+    width: 100%;
+  }
+  &[type="checkbox"], &[type="radio"] {
+    margin: 0 1rem;
+  }
+`

@@ -8,7 +8,7 @@
   --gray: #DCDCE2;
   --white: #fff;
   --off-white: #F8F9FC;
-
+  --placeholder: var(--gray);
   --primary: var(--green-50);
 }
 
@@ -53,4 +53,17 @@ main {
     font-size: 2rem;
   }
   
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--placeholder);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #DCDCE2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--placeholder);
 }
